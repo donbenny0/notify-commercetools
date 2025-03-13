@@ -54,8 +54,6 @@ deployAs:
         - key: ENABLE_NEW_JSX_TRANSFORM
           description: Enable new JSX transform
           required: true
-          default: true
         - key: FAST_REFRESH
           description: Enable Fast Refresh
           required: true
-          default: true
