@@ -41,7 +41,7 @@ deployAs:
   - name: merchant-center-notifiy
     applicationType: merchant-center-custom-application
     scripts:
-      postDeploy: yarn install && yarn build
+      postDeploy: yarn install && yarn run build
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
