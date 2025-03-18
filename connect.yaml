@@ -50,6 +50,9 @@ deployAs:
         - key: CLOUD_IDENTIFIER
           description: The cloud identifier
           default: 'gcp-eu'
+        - key: PROJECT_ID
+          description: The project id
+          default: 'ayata-connectors'
         - key: ENTRY_POINT_URI_PATH
           description: The Application entry point URI path
           required: true

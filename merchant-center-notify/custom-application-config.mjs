@@ -6,12 +6,12 @@ import { PERMISSIONS, entryPointUriPath } from './src/constants';
 const config = {
   name: 'Notifications',
   entryPointUriPath,
-  cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
+  cloudIdentifier: 'gcp-eu',
   env: {
     development: {
-      initialProjectKey: "ayata-connectors",
+      initialProjectKey: "${env:PROJECT_ID}",
     },
-    production: {
+   production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
       url: '${env:APPLICATION_URL}',
     },
