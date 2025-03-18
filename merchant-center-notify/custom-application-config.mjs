@@ -8,7 +8,8 @@ const config = {
   entryPointUriPath,
   cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   additionalEnv: {
-   ENABLE_NEW_JSX_TRANSFORM: 'true',
+    ENABLE_NEW_JSX_TRANSFORM: 'true',
+    FAST_REFRESH: 'true'
  },
   env: {
     development: {
