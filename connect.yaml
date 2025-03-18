@@ -15,6 +15,7 @@ deployAs:
           description: custom message template
           required: true
           default: "Dear *{{shippingAddress.firstName}}*,\n\nThank you for your order! We're excited to let you know that your order has been confirmed. 🛒🎉\n\nWe'll notify you once it's shipped. Feel free to reach out if you have any questions.\n\nThank you for shopping with us!"
+
       securedConfiguration:
         - key: CTP_PROJECT_KEY
           description: commercetools Composable Commerce project key
@@ -33,14 +34,12 @@ deployAs:
           required: true
         - key: TWILIO_AUTH_TOKEN
           description: Twilio auth token
-          required: tr
+          required: true
         - key: TWILIO_FROM_NUMBER
           description: Twilio from number
           required: true
-  - name: merchant-center-notify
+  - name: merchant-center-notifiy
     applicationType: merchant-center-custom-application
-    scripts:
-      postDeploy: yarn install && yarn run build
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
@@ -49,9 +48,6 @@ deployAs:
         - key: CLOUD_IDENTIFIER
           description: The cloud identifier
           default: 'gcp-eu'
-        - key: PROJECT_ID
-          description: The project id
-          default: 'ayata-connectors'
         - key: ENTRY_POINT_URI_PATH
           description: The Application entry point URI path
           required: true
