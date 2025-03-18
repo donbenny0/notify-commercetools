@@ -39,6 +39,8 @@ deployAs:
           required: true
   - name: merchant-center-notify
     applicationType: merchant-center-custom-application
+    scripts:
+      postDeploy: yarn install && yarn build && yarn run post-deploy
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
@@ -50,19 +52,6 @@ deployAs:
         - key: ENTRY_POINT_URI_PATH
           description: The Application entry point URI path identified during registration of Custom Application
           required: true
-        - key: ENABLE_NEW_JSX_TRANSFORM
-          description: Enable new JSX transform
-          required: true
         - key: FAST_REFRESH
           description: Enable Fast Refresh
           required: true
-inheritAs:
-  configuration:
-    securedConfiguration:
-      - key: GLOBAL_SECURED_CONFIGURATION
-        description: This secured configuration will configuration will be applied to all applications
-        required: true
-    standardConfiguration:
-      - key: GLOBAL_STANDARD_CONFIGURATION
-        description: This standard configuration will configuration will be applied to all applications
-        required: true
