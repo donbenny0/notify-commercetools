@@ -9,7 +9,7 @@ const config = {
   cloudIdentifier: 'gcp-eu',
   env: {
     development: {
-      initialProjectKey: "${env:PROJECT_ID}",
+      initialProjectKey: "ayata-connectors",
     },
    production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
