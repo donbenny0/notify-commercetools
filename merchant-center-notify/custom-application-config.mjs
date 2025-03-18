@@ -7,7 +7,9 @@ const config = {
   name: 'Notifications',
   entryPointUriPath,
   cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
- 
+  additionalEnv: {
+   ENABLE_NEW_JSX_TRANSFORM: 'true',
+ },
   env: {
     development: {
       initialProjectKey: 'ayata-connectors',
