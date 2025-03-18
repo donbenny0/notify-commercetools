@@ -34,7 +34,7 @@ deployAs:
           required: true
         - key: TWILIO_AUTH_TOKEN
           description: Twilio auth token
-          required: true
+          required: tr
         - key: TWILIO_FROM_NUMBER
           description: Twilio from number
           required: true
