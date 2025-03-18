@@ -6,14 +6,14 @@ import { PERMISSIONS, entryPointUriPath } from './src/constants';
 const config = {
   name: 'Notifications',
   entryPointUriPath,
-  cloudIdentifier: '${env:CLOUD_IDENTIFIER}'|| 'gcp-eu',
+  cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   env: {
     development: {
       initialProjectKey: "ayata-connectors",
     },
     production: {
-      applicationId: '${env:CUSTOM_APPLICATION_ID}' || 'cm870gdpi004rxi01gxqc2qpb',
-      url: '${env:APPLICATION_URL}' || 'https://mc-app-pmh2ujr237cvfqkzxcfcw1vf.europe-west1.gcp.2.commercetools.app',
+      applicationId: '${env:CUSTOM_APPLICATION_ID}',
+      url: '${env:APPLICATION_URL}',
     },
   },
   oAuthScopes: {
