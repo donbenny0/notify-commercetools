@@ -38,28 +38,3 @@ deployAs:
         - key: TWILIO_FROM_NUMBER
           description: Twilio from number
           required: true
-  - name: merchant-center-notify
-    applicationType: merchant-center-custom-application
-    scripts:
-      postDeploy: yarn install && yarn run build
-    configuration:
-      standardConfiguration:
-        - key: CUSTOM_APPLICATION_ID
-          description: the Custom Application ID
-          required: true
-        - key: CLOUD_IDENTIFIER
-          description: The cloud identifier
-          default: 'gcp-eu'
-        - key: PROJECT_ID
-          description: The Ct project ID
-          required: true
-          default: 'ayata-connectors'
-        - key: ENTRY_POINT_URI_PATH
-          description: The Application entry point URI path
-          required: true
-        - key: ENABLE_NEW_JSX_TRANSFORM
-          description: Enable new JSX transform
-          required: true
-        - key: FAST_REFRESH
-          description: Enable Fast Refresh
-          required: true
