@@ -38,8 +38,10 @@ deployAs:
         - key: TWILIO_FROM_NUMBER
           description: Twilio from number
           required: true
-  - name: merchant-center-notifiy
+  - name: merchant-center-notify
     applicationType: merchant-center-custom-application
+    scripts:
+      postDeploy: yarn install && yarn run build
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
