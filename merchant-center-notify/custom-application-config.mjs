@@ -4,7 +4,7 @@ import { PERMISSIONS, entryPointUriPath } from './src/constants';
  * @type {import('@commercetools-frontend/application-config').ConfigOptionsForCustomApplication}
  */
 const config = {
-  name: 'Starter Typescript 834cb6',
+  name: 'Notifications',
   entryPointUriPath,
  cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   env: {
