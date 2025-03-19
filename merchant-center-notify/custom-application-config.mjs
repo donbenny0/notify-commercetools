@@ -1,25 +1,20 @@
-import { PERMISSIONS, entryPointUriPath } from './src/constants';
+import { PERMISSIONS} from './src/constants';
 
 /**
  * @type {import('@commercetools-frontend/application-config').ConfigOptionsForCustomApplication}
  */
 const config = {
   name: 'Notifications',
-  entryPointUriPath,
+  entryPointUriPath: '${env:ENTRY_POINT_URI_PATH}',
   cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   env: {
     development: {
-      initialProjectKey: 'ayata-connectors',
+      initialProjectKey: 'my-project-key',
     },
     production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
       url: '${env:APPLICATION_URL}',
-
     },
-  },
-  additionalEnv: {
-    ENABLE_NEW_JSX_TRANSFORM: '${env:ENABLE_NEW_JSX_TRANSFORM}',
-    FAST_REFRESH: '${env:FAST_REFRESH}',
   },
   oAuthScopes: {
     view: ['view_orders'],
