@@ -10,14 +10,11 @@ const config = {
   env: {
     development: {
       initialProjectKey: 'ayata-connectors',
-      enableNewJsxTransform: '${env:ENABLE_NEW_JSX_TRANSFORM}',
-      fastRefresh: '${env:FAST_REFRESH}',
     },
     production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
       url: '${env:APPLICATION_URL}',
-      enableNewJsxTransform: '${env:ENABLE_NEW_JSX_TRANSFORM}',
-      fastRefresh: '${env:FAST_REFRESH}',
+
     },
   },
   additionalEnv: {
