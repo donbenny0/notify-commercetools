@@ -17,8 +17,8 @@ const config = {
     },
   },
   additionalEnv: {
-    ENABLE_NEW_JSX_TRANSFORM: 'true',
-    FAST_REFRESH: 'true',
+    enableNewJsxTransform: 'true',
+    fastRefresh: 'true',
   },
   oAuthScopes: {
     view: ['view_orders'],
