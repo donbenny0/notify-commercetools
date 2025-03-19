@@ -39,22 +39,22 @@ deployAs:
           required: true
   - name: merchant-center-notify
     applicationType: merchant-center-custom-application
-    scripts:
-      postDeploy: yarn install && yarn build
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
-          description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
+          description: The Custom Application ID
           required: true
         - key: CLOUD_IDENTIFIER
-          description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
+          description: The cloud identifier
           default: 'gcp-eu'
         - key: ENTRY_POINT_URI_PATH
-          description: The Application entry point URI path identified during registration of Custom Application
+          description: The Application entry point URI path
           required: true
         - key: ENABLE_NEW_JSX_TRANSFORM
-          description: Enable new JSX transform
-          required: true
+          description: Enables new JSX Transform
+          required: false
+          default: 'true'
         - key: FAST_REFRESH
-          description: Enable Fast Refresh
-          required: true
+          description: Enables Fast Refresh feature
+          required: false
+          default: 'true'

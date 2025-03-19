@@ -7,21 +7,25 @@ const config = {
   name: 'Notifications',
   entryPointUriPath,
   cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
-  additionalEnv: {
-    ENABLE_NEW_JSX_TRANSFORM: 'true',
-    FAST_REFRESH: 'true'
- },
   env: {
     development: {
       initialProjectKey: 'ayata-connectors',
+      enableNewJsxTransform: '${env:ENABLE_NEW_JSX_TRANSFORM}',
+      fastRefresh: '${env:FAST_REFRESH}',
     },
     production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
       url: '${env:APPLICATION_URL}',
+      enableNewJsxTransform: '${env:ENABLE_NEW_JSX_TRANSFORM}',
+      fastRefresh: '${env:FAST_REFRESH}',
     },
   },
+  additionalEnv: {
+    ENABLE_NEW_JSX_TRANSFORM: '${env:ENABLE_NEW_JSX_TRANSFORM}',
+    FAST_REFRESH: '${env:FAST_REFRESH}',
+  },
   oAuthScopes: {
-     view: ['view_orders'],
+    view: ['view_orders'],
     manage: ['manage_orders'],
   },
   icon: '${path:@commercetools-frontend/assets/application-icons/rocket.svg}',
@@ -30,7 +34,7 @@ const config = {
     labelAllLocales: [],
     permissions: [PERMISSIONS.View],
   },
- submenuLinks: [
+  submenuLinks: [
     {
       uriPath: 'settings',
       defaultLabel: 'Notification settings',
