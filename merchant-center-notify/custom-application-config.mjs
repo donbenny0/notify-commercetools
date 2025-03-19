@@ -1,4 +1,4 @@
-import { PERMISSIONS} from './src/constants';
+import { PERMISSIONS } from './src/constants';
 
 /**
  * @type {import('@commercetools-frontend/application-config').ConfigOptionsForCustomApplication}
@@ -15,6 +15,10 @@ const config = {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
       url: '${env:APPLICATION_URL}',
     },
+  },
+  additionalEnv: {
+    ENABLE_NEW_JSX_TRANSFORM: 'true',
+    FAST_REFRESH: 'true',
   },
   oAuthScopes: {
     view: ['view_orders'],

@@ -50,11 +50,3 @@ deployAs:
         - key: ENTRY_POINT_URI_PATH
           description: The Application entry point URI path
           required: true
-        - key: ENABLE_NEW_JSX_TRANSFORM
-          description: Enables new JSX Transform
-          required: false
-          default: 'true'
-        - key: FAST_REFRESH
-          description: Enables Fast Refresh feature
-          required: false
-          default: 'true'
