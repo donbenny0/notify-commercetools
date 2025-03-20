@@ -14,7 +14,7 @@ const config = {
     },
     production: {
       applicationId: '${env:CUSTOM_APPLICATION_ID}',
-      url: 'https://notify-commercetools-connector.vercel.app',
+      url: '${env:APPLICATION_URL}',
     },
   },
   oAuthScopes: {
