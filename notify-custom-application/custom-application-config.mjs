@@ -6,7 +6,7 @@ import { PERMISSIONS } from './src/constants';
 const config = {
   name: 'Notifications',
   entryPointUriPath: '${env:ENTRY_POINT_URI_PATH}',
-  description: 'The all-in-one checkout solution',
+  description: 'This connector is designed to automate real-time order status notifications for customers. It listens for changes to order statuses in CommerceTools and automatically sends WhatsApp notifications to customers via Twilio when an order confirmed.',
   cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   env: {
     development: {
