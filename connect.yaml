@@ -1,5 +1,5 @@
 deployAs:
-  - name: notify-custom-application
+  - name: merchant-center-notify
     applicationType: merchant-center-custom-application
     scripts:
       postDeploy: yarn && yarn build
