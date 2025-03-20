@@ -2,6 +2,7 @@ import { actions } from '@commercetools-frontend/sdk';
 import { MC_API_PROXY_TARGETS } from '@commercetools-frontend/constants';
 import { ApiResponse } from '../interfaces/messages.interface';
 
+
 export const fetchMessageBodyObject = async (dispatch: any) => {
     try {
         const result = await dispatch(

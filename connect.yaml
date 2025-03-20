@@ -1,5 +1,5 @@
 deployAs:
-  - name: notify
+  - name: notify-event
     applicationType: event
     endpoint: /event
     scripts:
@@ -37,8 +37,11 @@ deployAs:
         - key: TWILIO_FROM_NUMBER
           description: Twilio from number
           required: true
-  - name: merchant-center-notify
+  - name: notify-custom-application
     applicationType: merchant-center-custom-application
+    scripts:  
+      postDeploy: yarn install && yarn build
+      preUndeploy: yarn install && yarn build
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
@@ -50,11 +53,3 @@ deployAs:
         - key: ENTRY_POINT_URI_PATH
           description: The Application entry point URI path
           required: true
-        - key: ENABLE_NEW_JSX_TRANSFORM
-          description: Enable new JSX transform
-          required: false
-          default: "true"
-        - key: FAST_REFRESH
-          description: Enable Fast Refresh
-          required: false
-          default: "true"
