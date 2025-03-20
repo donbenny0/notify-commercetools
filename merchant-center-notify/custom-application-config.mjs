@@ -16,10 +16,6 @@ const config = {
       url: '${env:APPLICATION_URL}',
     },
   },
-  additionalEnv: {
-    enableNewJsxTransform: 'true',
-    fastRefresh: 'true',
-  },
   oAuthScopes: {
     view: ['view_orders'],
     manage: ['manage_orders'],
