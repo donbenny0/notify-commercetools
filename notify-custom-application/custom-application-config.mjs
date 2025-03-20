@@ -13,7 +13,7 @@ const config = {
     },
     production: {
       applicationId: "${env:CUSTOM_APPLICATION_ID}",
-      url: "https://notifications-taupe.vercel.app",
+      url: '${env:APPLICATION_URL}',
     },
   },
   oAuthScopes: {
