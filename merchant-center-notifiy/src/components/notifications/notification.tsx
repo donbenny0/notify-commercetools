@@ -22,6 +22,7 @@ import Loader from '../loader';
 import * as XLSX from 'xlsx';
 
 const ITEMS_PER_PAGE: number = 20;
+
 const columns = [
   { key: 'resourceType', label: 'Resource Type', isSortable: true },
   { key: 'recipient', label: 'Recipient', isSortable: true },

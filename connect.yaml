@@ -1,5 +1,5 @@
 deployAs:
-  - name: notify-event
+  - name: notify
     applicationType: event
     endpoint: /event
     scripts:
@@ -15,6 +15,7 @@ deployAs:
           description: custom message template
           required: true
           default: "Dear *{{shippingAddress.firstName}}*,\n\nThank you for your order! We're excited to let you know that your order has been confirmed. 🛒🎉\n\nWe'll notify you once it's shipped. Feel free to reach out if you have any questions.\n\nThank you for shopping with us!"
+
       securedConfiguration:
         - key: CTP_PROJECT_KEY
           description: commercetools Composable Commerce project key
@@ -37,18 +38,16 @@ deployAs:
         - key: TWILIO_FROM_NUMBER
           description: Twilio from number
           required: true
-  - name: notify-custom-application
+  - name: merchant-center-notifiy
     applicationType: merchant-center-custom-application
-    scripts:
-      postDeploy: yarn && yarn build
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
-          description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
+          description: the Custom Application ID
           required: true
         - key: CLOUD_IDENTIFIER
-          description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
+          description: The cloud identifier
           default: 'gcp-eu'
         - key: ENTRY_POINT_URI_PATH
-          description: The Application entry point URI path identified during registration of Custom Application
+          description: The Application entry point URI path
           required: true
