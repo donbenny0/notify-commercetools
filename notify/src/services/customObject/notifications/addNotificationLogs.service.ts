@@ -35,8 +35,8 @@ export const addNotificationLog = async (
 ): Promise<void> => {
     try {
         const errorMessage = success
-            ? 'Notified!'
-            : error?.message || error?.toString() || 'Unknown error';
+            ? `Notified! with log ${error}`
+            : error || error?.toString() || 'Unknown error';
 
         const statusCode = error instanceof CustomError
             ? error.statusCode

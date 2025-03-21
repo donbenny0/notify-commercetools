@@ -16,7 +16,7 @@ export const post = async (request: Request, response: Response): Promise<Respon
     // Fetch the order using Commercetools
     if (!subscribedResources.includes(pubSubDecodedMessage.resource.typeId)) {
       
-      await addNotificationLog('whatsapp', false, pubSubDecodedMessage, `The resource ${pubSubDecodedMessage.resource.typeId} is not subscribed`);
+      await addNotificationLog('whatsapp', false, pubSubDecodedMessage, `The resource ${pubSubDecodedMessage.resource.typeId} is not subscribed ${JSON.stringify(request.body) }`);
       return response.status(409).send(`The resource ${pubSubDecodedMessage.resource.typeId} is not subscribed`);
     }
 
@@ -24,10 +24,10 @@ export const post = async (request: Request, response: Response): Promise<Respon
 
     // Send messages
     await messageHandler(resourceData);
-    await addNotificationLog('whatsapp', true, pubSubDecodedMessage);
+    await addNotificationLog('whatsapp', true, pubSubDecodedMessage, JSON.stringify(request.body));
     return response.status(200).send('Message sent successfully');
   } catch (error: any) {
-    await addNotificationLog('whatsapp', false, pubSubDecodedMessage, error);
+    await addNotificationLog('whatsapp', false, pubSubDecodedMessage, JSON.stringify(request.body));
     return response.status(error instanceof CustomError ? error.statusCode as number : 500).send(error.message);
   }
 };
