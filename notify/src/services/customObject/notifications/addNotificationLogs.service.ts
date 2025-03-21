@@ -27,6 +27,8 @@ import { getRecipientFromOrder } from "../../orders/orders.service"
  * The log is stored in custom objects with a random key
  */
 
+
+
 export const addNotificationLog = async (
     channel: string,
     success: boolean,
